@@ -32,25 +32,19 @@ class PetRepositoryMock2 implements PetRepository {
   }
 }
 
-const PetFactory = SingletonFactory<PetRepository>(() => {
-  return env.production
-    ? {
-        useClass: PetRepositoryMock1,
-        deps: [],
-      }
-    : {
-        useClass: PetRepositoryMock2,
-        deps: [],
-      };
+const PetRepositoryFactory = () => {
+  return env.production ? new PetRepositoryMock1() : new PetRepositoryMock2();
+};
+
+const PetRepositorySingletonFactory =
+  SingletonFactory<PetRepository>(PetRepositoryFactory);
+
+PetRepositorySingletonFactory.resetInstance();
+PetRepositorySingletonFactory.setInstance(() => {
+  return new PetRepositoryMock2();
 });
 
-PetFactory.getInstance();
-PetFactory.resetInstance();
-PetFactory.setInstance(() => {
-  return {
-    useClass: PetRepositoryMock2,
-    deps: [],
-  };
-});
+// const petRepositoryFactory =
+PetRepositorySingletonFactory.getInstance();
 
 // simulacion de mocks que son una clase
