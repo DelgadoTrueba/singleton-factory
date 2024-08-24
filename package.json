@@ -1,5 +1,5 @@
 {
-  "name": "@delgadotrueba/template-js",
+  "name": "@delgadotrueba/singleton-factory",
   "version": "0.0.1",
   "description": "Description",
   "author": "delgadotrueba",
@@ -12,7 +12,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/delgadotrueba/template-js"
+    "url": "https://github.com/delgadotrueba/singleton-factory"
   },
   "scripts": {
     "build": "npm run build:cjs && npm run build:mjs",
@@ -23,7 +23,7 @@
     "test": "npm run test:cjs && npm run test:mjs",
     "test:cjs": "npx jest -c jest.cjs.config.js --verbose",
     "test:mjs": "npx jest -c jest.mjs.config.js --verbose",
-    "test:coverage": "npm run test -- --coverage",
+    "test:coverage": "npm run test:cjs -- --coverage && npm run test:mjs -- --coverage",
     "prepare": "husky"
   },
   "devDependencies": {

@@ -1,4 +1,4 @@
-# @delgadotrueba/template-js
+# @delgadotrueba/singleton-factory
 
 > description
 
@@ -9,7 +9,7 @@
 ## Installation
 
 ```
-npm install @delgadotrueba/template-js --save
+npm install @delgadotrueba/singleton-factory --save
 ```
 
 ## Import
@@ -32,9 +32,9 @@ npm install @delgadotrueba/template-js --save
 
 MIT
 
-[npm-image]: https://img.shields.io/npm/v/%40delgadotrueba%template-js
-[npm-url]: https://www.npmjs.com/package/@delgadotrueba/template-js
-[downloads-image]: https://img.shields.io/npm/dy/%40delgadotrueba%template-js
-[downloads-url]: https://www.npmjs.com/package/@delgadotrueba/template-js
-[license-image]: http://img.shields.io/npm/l/%40delgadotrueba%template-js.svg?style=flat
+[npm-image]: https://img.shields.io/npm/v/%40delgadotrueba%singleton-factory
+[npm-url]: https://www.npmjs.com/package/@delgadotrueba/singleton-factory
+[downloads-image]: https://img.shields.io/npm/dy/%40delgadotrueba%singleton-factory
+[downloads-url]: https://www.npmjs.com/package/@delgadotrueba/singleton-factory
+[license-image]: http://img.shields.io/npm/l/%40delgadotrueba%singleton-factory.svg?style=flat
 [license-url]: LICENSE.md
