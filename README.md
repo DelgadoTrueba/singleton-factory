@@ -1,6 +1,6 @@
 # @delgadotrueba/singleton-factory
 
-> description
+> A personal library designed for creating singleton-based class or object factories. Additionally, it enhances unit testing allowing the mocking of singleton factories
 
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][downloads-image]][downloads-url]
@@ -27,6 +27,22 @@ npm install @delgadotrueba/singleton-factory --save
 ```
 
 ## Usage
+
+```
+// PetFactorySingleton.ts
+
+const PetFactory: FactoryFnc<PetRepositoryInterface> = () => new PetRepositoryMock1();
+export const PetFactorySingleton: SingletonFactoryInterface<PetRepositoryInterface> = SingletonFactory(PetFactory);
+
+// Pet.view.ts
+
+const PetRepository = PetFactorySingleton.getInstance()
+
+// Pet.view.spec.ts
+
+PetFactorySingleton.resetInstance()
+PetFactorySingleton.setInstance(() => new PetRepositoryMock2())
+```
 
 ## License
 
